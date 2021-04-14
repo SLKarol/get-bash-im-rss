@@ -1,0 +1,25 @@
+{
+  "name": "@stanislavkarol/get-bash-im-rss",
+  "version": "1.0.0",
+  "description": "Возвращает промис-массив содержимого rss-ленты bash.im",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SLKarol/get-bash-im-rss.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SLKarol/get-bash-im-rss/issues"
+  },
+  "homepage": "https://github.com/SLKarol/get-bash-im-rss#readme",
+  "dependencies": {
+    "node-fetch": "^2.6.1",
+    "node-html-parser": "^3.1.4",
+    "turndown": "^7.0.0"
+  }
+}
