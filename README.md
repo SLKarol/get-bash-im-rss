@@ -29,3 +29,5 @@ getListBashOrg().then((k) => {
   }
 });
 ```
+
+В качестве параметра функция может принимать url другого цитатника: [ithappens.me](https://ithappens.me/)

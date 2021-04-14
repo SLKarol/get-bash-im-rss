@@ -36,18 +36,16 @@ function getListBashOrg(rssUrl = "https://bash.im/rss/") {
   return fetch(rssUrl).then((response) =>
     response.text().then((htmlContent) => {
       const root = HTMLParser.parse(htmlContent);
-      return Array.from(root.querySelectorAll("item"))
-        .splice(0, 7)
-        .map((item) => {
-          const content = getDescriptionToMarkDown(item);
-          const id = item.querySelector("guid").text;
-          const bashContent = {
-            content,
-            id,
-            title: item.querySelector("title").text,
-          };
-          return bashContent;
-        });
+      return Array.from(root.querySelectorAll("item")).map((item) => {
+        const content = getDescriptionToMarkDown(item);
+        const id = item.querySelector("guid").text;
+        const bashContent = {
+          content,
+          id,
+          title: item.querySelector("title").text,
+        };
+        return bashContent;
+      });
     })
   );
 }
